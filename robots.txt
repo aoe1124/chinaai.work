@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://chinaai.work/sitemap.xml 
