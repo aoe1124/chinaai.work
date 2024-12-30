@@ -37,10 +37,10 @@
         <div class="container mx-auto px-4">
             <ul class="flex overflow-x-auto gap-4 py-4 pl-0" role="navigation">
                 <li><span class="py-2 rounded-full text-gray-400 flex items-center font-bold">Categories：</span></li>
-                <li><button data-target="ai-models" class="nav-btn px-5 py-2 rounded-full text-gray-600 hover:bg-gray-100">AI Models & LLMs</button></li>
-                <li><button data-target="ai-creative" class="nav-btn px-5 py-2 rounded-full text-gray-600 hover:bg-gray-100">AI Creative Tools</button></li>
-                <li><button data-target="ai-personal" class="nav-btn px-5 py-2 rounded-full text-gray-600 hover:bg-gray-100">AI Personal Tools</button></li>
-                <li><button data-target="ai-enterprise" class="nav-btn px-5 py-2 rounded-full text-gray-600 hover:bg-gray-100">Enterprise AI</button></li>
+                <li><button data-target="ai-models" class="nav-btn px-5 py-2 rounded-full text-gray-600 hover:bg-gray-100 hover:text-gray-600">AI Models & LLMs</button></li>
+                <li><button data-target="ai-creative" class="nav-btn px-5 py-2 rounded-full text-gray-600 hover:bg-gray-100 hover:text-gray-600">AI Creative Tools</button></li>
+                <li><button data-target="ai-personal" class="nav-btn px-5 py-2 rounded-full text-gray-600 hover:bg-gray-100 hover:text-gray-600">AI Personal Tools</button></li>
+                <li><button data-target="ai-enterprise" class="nav-btn px-5 py-2 rounded-full text-gray-600 hover:bg-gray-100 hover:text-gray-600">Enterprise AI</button></li>
             </ul>
         </div>
     </nav>
@@ -49,8 +49,8 @@
     <section class="bg-gray-50">
         <div class="container mx-auto px-4 py-12">
             <!-- AI Models & LLMs Module -->
-            <div id="ai-models" class="mb-16">
-                <div class="flex items-center justify-between mb-8">
+            <div class="mb-16">
+                <div id="ai-models" class="flex items-center justify-between mb-8">
                     <div>
                         <h2 class="text-3xl font-bold text-gray-900">AI Models & LLMs</h2>
                         <p class="text-gray-600 mt-2">Leading AI models and large language models from China's tech companies.</p>
@@ -414,8 +414,8 @@
                     </div>
 
             <!-- AI Creative Tools -->
-            <div id="ai-creative" class="mb-16">
-                <div class="flex items-center justify-between mb-8">
+            <div class="mb-16">
+                <div id="ai-creative" class="flex items-center justify-between mb-8">
                     <div>
                         <h2 class="text-3xl font-bold text-gray-900">AI Creative Tools</h2>
                         <p class="text-gray-600 mt-2">AI-powered tools for image generation and video creation.</p>
@@ -644,8 +644,8 @@
             </div>
 
             <!-- AI Personal Tools Module -->
-            <div id="ai-personal" class="mb-16">
-                <div class="flex items-center justify-between mb-8">
+            <div class="mb-16">
+                <div id="ai-personal" class="flex items-center justify-between mb-8">
                     <div>
                         <h2 class="text-3xl font-bold text-gray-900">AI Personal Tools</h2>
                         <p class="text-gray-600 mt-2">AI-powered tools for work productivity and entertainment, including writing, audio, office, and lifestyle applications.</p>
@@ -1008,8 +1008,8 @@
             </div>
 
              <!-- Enterprise AI Module -->
-             <div id="ai-enterprise" class="mb-16">
-                <div class="flex items-center justify-between mb-8">
+             <div class="mb-16">
+                <div id="ai-enterprise" class="flex items-center justify-between mb-8">
                     <div>
                         <h2 class="text-3xl font-bold text-gray-900">Enterprise AI</h2>
                         <p class="text-gray-600 mt-2">Professional AI solutions optimized for business applications.</p>
@@ -1138,9 +1138,43 @@
     <!-- FAQ Section -->
     <section class="bg-white border-t">
         <div class="container mx-auto px-4 py-12">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8">Frequently Asked Questions</h2>
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
             <div class="max-w-3xl mx-auto space-y-6">
-                <!-- FAQ 内容 -->
+                <!-- Language Support -->
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Can I use these AI products if I don't speak Chinese?</h3>
+                    <p class="text-gray-600">Products marked with 🌐 support English interface and usage. Products marked with 🇨🇳 are currently Chinese-only. We specifically highlight language support for each product to help international users make informed decisions.</p>
+                </div>
+
+                <!-- Payment Methods -->
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">What payment methods are accepted?</h3>
+                    <p class="text-gray-600">Payment methods vary by product. Most products support international credit cards. Some products may require Chinese payment methods. We recommend checking the specific product's website for detailed payment information.</p>
+                </div>
+
+                <!-- Product Categories -->
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">What types of AI products are listed?</h3>
+                    <p class="text-gray-600">We cover four main categories: AI Models & LLMs (large language models), AI Creative Tools (image/video generation), AI Personal Tools (productivity/entertainment), and Enterprise AI solutions. Each product is carefully selected based on quality and reliability.</p>
+                </div>
+
+                <!-- Product Updates -->
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">How often is the directory updated?</h3>
+                    <p class="text-gray-600">We update our directory irregularly to include new products and reflect changes in existing ones. Launch dates are clearly marked on each product card to help you identify the latest additions.</p>
+                </div>
+
+                <!-- Product Selection -->
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">How are products selected for listing?</h3>
+                    <p class="text-gray-600">Products are selected based on several criteria: reliability of the company, product quality, maintenance frequency, and international accessibility. We focus on established companies and well-maintained products.</p>
+                </div>
+
+                <!-- Regional Restrictions -->
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Are there any regional restrictions?</h3>
+                    <p class="text-gray-600">Some products may have regional restrictions or different service levels based on user location. We recommend checking the product's terms of service for specific regional availability information.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -1149,59 +1183,59 @@
     <footer class="bg-gray-50 border-t">
         <div class="container mx-auto px-4 py-8 text-center text-gray-600">
             <p class="mb-2">China AI Products Directory - Your Guide to Chinese AI Technologies</p>
-            <p class="text-sm">Last Updated: March 2024</p>
+            <div class="flex justify-center items-center gap-4 mt-4">
+                <a href="mailto:aoe800@gmail.com" class="text-gray-500 hover:text-gray-700">Contact Us: aoe800@gmail.com</a>
+                <span class="text-gray-400">|</span>
+                <a href="links.html" class="text-gray-500 hover:text-gray-700">Partner Links</a>
+            </div>
         </div>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // 获取所有导航按钮
             const navButtons = document.querySelectorAll('.nav-btn');
             
-            // 点击导航按钮处理
+            // 更新按钮样式的函数
+            function updateButtonStyles(activeButton) {
+                navButtons.forEach(btn => {
+                    btn.classList.remove('bg-gray-900', 'text-white');
+                    btn.classList.add('text-gray-600');
+                });
+                activeButton.classList.remove('text-gray-600');
+                activeButton.classList.add('bg-gray-900', 'text-white');
+            }
+            
             navButtons.forEach(button => {
                 button.addEventListener('click', (e) => {
-                    // 移除所有按钮的激活状态
-                    navButtons.forEach(btn => {
-                        btn.classList.remove('bg-gray-900', 'text-white');
-                        btn.classList.add('text-gray-600');
-                    });
-                    
-                    // 添加当前按钮的激活状态
-                    button.classList.remove('text-gray-600');
-                    button.classList.add('bg-gray-900', 'text-white');
+                    // 立即更新按钮样式
+                    updateButtonStyles(button);
                     
                     // 滚动到目标位置
                     const targetId = button.getAttribute('data-target');
                     const targetElement = document.getElementById(targetId);
                     if (targetElement) {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
+                        const navHeight = document.querySelector('nav').offsetHeight;
+                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
                         });
                     }
                 });
             });
 
-            // 创建 Intersection Observer 来检测可见区域
+            // Intersection Observer 部分
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        // 找到对应的导航按钮
                         const targetButton = document.querySelector(`.nav-btn[data-target="${entry.target.id}"]`);
                         if (targetButton) {
-                            // 更新导航状态
-                            navButtons.forEach(btn => {
-                                btn.classList.remove('bg-gray-900', 'text-white');
-                                btn.classList.add('text-gray-600');
-                            });
-                            targetButton.classList.remove('text-gray-600');
-                            targetButton.classList.add('bg-gray-900', 'text-white');
+                            updateButtonStyles(targetButton);
                         }
                     }
                 });
             }, {
-                threshold: 0.3 // 当目标元素30%可见时触发
+                threshold: 0.3
             });
 
             // 观察所有内容区域
