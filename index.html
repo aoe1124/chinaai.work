@@ -33,14 +33,14 @@
     </header>
 
     <!-- Category Navigation -->
-    <nav class="sticky top-0 bg-white border-b shadow-sm">
+    <nav class="sticky top-0 bg-white border-b shadow-sm z-10">
         <div class="container mx-auto px-4">
-            <ul class="flex overflow-x-auto gap-4 py-4" role="navigation">
-                <li><button class="px-4 py-2 rounded-full bg-blue-500 text-white">All</button></li>
-                <li><button class="px-4 py-2 rounded-full text-gray-600 hover:bg-gray-100">AI Models & LLMs</button></li>
-                <li><button class="px-4 py-2 rounded-full text-gray-600 hover:bg-gray-100">AI Creative Tools</button></li>
-                <li><button class="px-4 py-2 rounded-full text-gray-600 hover:bg-gray-100">AI Personal Tools</button></li>
-                <li><button class="px-4 py-2 rounded-full text-gray-600 hover:bg-gray-100">Enterprise AI</button></li>
+            <ul class="flex overflow-x-auto gap-4 py-4 pl-0" role="navigation">
+                <li><span class="py-2 rounded-full text-gray-400 flex items-center font-bold">Categories：</span></li>
+                <li><button data-target="ai-models" class="nav-btn px-5 py-2 rounded-full text-gray-600 hover:bg-gray-100">AI Models & LLMs</button></li>
+                <li><button data-target="ai-creative" class="nav-btn px-5 py-2 rounded-full text-gray-600 hover:bg-gray-100">AI Creative Tools</button></li>
+                <li><button data-target="ai-personal" class="nav-btn px-5 py-2 rounded-full text-gray-600 hover:bg-gray-100">AI Personal Tools</button></li>
+                <li><button data-target="ai-enterprise" class="nav-btn px-5 py-2 rounded-full text-gray-600 hover:bg-gray-100">Enterprise AI</button></li>
             </ul>
         </div>
     </nav>
@@ -49,15 +49,14 @@
     <section class="bg-gray-50">
         <div class="container mx-auto px-4 py-12">
             <!-- AI Models & LLMs Module -->
-            <div class="mb-16">
+            <div id="ai-models" class="mb-16">
                 <div class="flex items-center justify-between mb-8">
                     <div>
                         <h2 class="text-3xl font-bold text-gray-900">AI Models & LLMs</h2>
-                        <p class="text-gray-600 mt-2">Explore China's advanced large language models and AI foundations.</p>
-        </div>
-                   
+                        <p class="text-gray-600 mt-2">Leading AI models and large language models from China's tech companies.</p>
+                    </div>
                 </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     <!-- 这里将放置相关的产品卡片 -->
                <!-- Kimi -->
                <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-6">
@@ -414,8 +413,8 @@
                 </div>
                     </div>
 
-            <!-- AI Creative Tools Module -->
-            <div class="mb-16">
+            <!-- AI Creative Tools -->
+            <div id="ai-creative" class="mb-16">
                 <div class="flex items-center justify-between mb-8">
                     <div>
                         <h2 class="text-3xl font-bold text-gray-900">AI Creative Tools</h2>
@@ -645,7 +644,7 @@
             </div>
 
             <!-- AI Personal Tools Module -->
-            <div class="mb-16">
+            <div id="ai-personal" class="mb-16">
                 <div class="flex items-center justify-between mb-8">
                     <div>
                         <h2 class="text-3xl font-bold text-gray-900">AI Personal Tools</h2>
@@ -993,7 +992,7 @@
                         <p class="text-gray-600 mb-4">AI-powered music creation platform offering intelligent composition, arrangement, and sound generation. Features one-click music creation and professional music production tools.</p>
                         <div class="space-y-2">
                             <div class="flex gap-2">
-                                <span class="text-sm">🌐🇳 Chinese Only</span>
+                                <span class="text-sm">c🇳 Chinese Only</span>
                                 <span class="text-sm">🔄 Freemium</span>
                             </div>
                             <div class="flex gap-2">
@@ -1009,7 +1008,7 @@
             </div>
 
              <!-- Enterprise AI Module -->
-             <div class="mb-16">
+             <div id="ai-enterprise" class="mb-16">
                 <div class="flex items-center justify-between mb-8">
                     <div>
                         <h2 class="text-3xl font-bold text-gray-900">Enterprise AI</h2>
@@ -1135,13 +1134,6 @@
         </div>
     </section>
 
-    <!-- Products Grid -->
-    <main class="container mx-auto px-4 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-
-
-        </div>
-    </main>
 
     <!-- FAQ Section -->
     <section class="bg-white border-t">
@@ -1160,5 +1152,63 @@
             <p class="text-sm">Last Updated: March 2024</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 获取所有导航按钮
+            const navButtons = document.querySelectorAll('.nav-btn');
+            
+            // 点击导航按钮处理
+            navButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    // 移除所有按钮的激活状态
+                    navButtons.forEach(btn => {
+                        btn.classList.remove('bg-gray-900', 'text-white');
+                        btn.classList.add('text-gray-600');
+                    });
+                    
+                    // 添加当前按钮的激活状态
+                    button.classList.remove('text-gray-600');
+                    button.classList.add('bg-gray-900', 'text-white');
+                    
+                    // 滚动到目标位置
+                    const targetId = button.getAttribute('data-target');
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // 创建 Intersection Observer 来检测可见区域
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // 找到对应的导航按钮
+                        const targetButton = document.querySelector(`.nav-btn[data-target="${entry.target.id}"]`);
+                        if (targetButton) {
+                            // 更新导航状态
+                            navButtons.forEach(btn => {
+                                btn.classList.remove('bg-gray-900', 'text-white');
+                                btn.classList.add('text-gray-600');
+                            });
+                            targetButton.classList.remove('text-gray-600');
+                            targetButton.classList.add('bg-gray-900', 'text-white');
+                        }
+                    }
+                });
+            }, {
+                threshold: 0.3 // 当目标元素30%可见时触发
+            });
+
+            // 观察所有内容区域
+            document.querySelectorAll('[id^="ai-"]').forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 </body>
 </html> 
