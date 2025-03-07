@@ -67,6 +67,7 @@
         <div class="container mx-auto px-4">
             <ul class="flex overflow-x-auto gap-4 py-4 pl-0" role="navigation">
                 <li><span class="py-2 rounded-full text-gray-400 flex items-center font-bold">Categories：</span></li>
+                <li><button data-target="ai-agents" class="nav-btn px-5 py-2 rounded-full text-gray-600 hover:bg-gray-100 hover:text-gray-600">AI Agents</button></li>
                 <li><button data-target="ai-models" class="nav-btn px-5 py-2 rounded-full text-gray-600 hover:bg-gray-100 hover:text-gray-600">AI Models & LLMs</button></li>
                 <li><button data-target="ai-creative" class="nav-btn px-5 py-2 rounded-full text-gray-600 hover:bg-gray-100 hover:text-gray-600">AI Creative Tools</button></li>
                 <li><button data-target="ai-personal" class="nav-btn px-5 py-2 rounded-full text-gray-600 hover:bg-gray-100 hover:text-gray-600">AI Personal Tools</button></li>
@@ -78,6 +79,45 @@
     <!-- Category Modules -->
     <section class="bg-gray-50">
         <div class="container mx-auto px-4 py-12">
+            <!-- AI Agents Module -->
+            <div class="mb-16">
+                <div id="ai-agents" class="flex items-center justify-between mb-8">
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-900">AI Agents</h2>
+                        <p class="text-gray-600 mt-2">Advanced AI agents that can autonomously perform complex tasks and solve real-world problems.</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <!-- Manus -->
+                    <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600">
+                                MN
+                            </div>
+                            <div class="ml-3">
+                                <h3 class="text-xl font-semibold">Manus</h3>
+                                <p class="text-sm text-gray-500">Manus AI</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">A general AI agent that bridges minds and actions, delivering results across various tasks in work and life. Manus not only thinks but completes tasks while you rest.</p>
+                        <div class="space-y-2">
+                            <div class="flex gap-2">
+                                <span class="text-sm">🌐 English Supported</span>
+                                <span class="text-sm">🔄 Freemium</span>
+                            </div>
+                            <div class="flex gap-2">
+                                <span class="text-sm bg-indigo-100 text-indigo-700 px-2 py-1 rounded-full">Agent</span>
+                                <span class="text-sm bg-purple-100 text-purple-700 px-2 py-1 rounded-full">Automation</span>
+                            </div>
+                            <div class="text-sm text-gray-500">Launch: 2024-03</div>
+                            <a href="https://manus.im/" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-600 inline-flex items-center">
+                                Visit Website →
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
             <!-- AI Models & LLMs Module -->
             <div class="mb-16">
                 <div id="ai-models" class="flex items-center justify-between mb-8">
